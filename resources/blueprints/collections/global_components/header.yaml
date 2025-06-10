@@ -1,0 +1,54 @@
+title: Header
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: navbar_item
+            field:
+              type: replicator
+              display: 'Navbar item'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: item_name
+                          field:
+                            type: text
+                            display: 'Item name'
+                        -
+                          handle: item_link
+                          field:
+                            type: link
+                            display: 'Item link'
+          -
+            handle: logo
+            field:
+              container: assets
+              type: assets
+              display: Logo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              from: slug

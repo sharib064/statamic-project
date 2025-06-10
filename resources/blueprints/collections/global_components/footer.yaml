@@ -1,0 +1,130 @@
+title: Footer
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+          -
+            handle: footer_title
+            field:
+              type: text
+              validate:
+                - required
+              display: 'Footer title'
+          -
+            handle: footer_logo
+            field:
+              container: assets
+              type: assets
+              display: 'Footer logo'
+          -
+            handle: addresses
+            field:
+              type: replicator
+              display: Addresses
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: address_title
+                          field:
+                            type: text
+                            display: 'Address title'
+                        -
+                          handle: address
+                          field:
+                            type: text
+                            display: Address
+                        -
+                          handle: map_link
+                          field:
+                            type: link
+                            display: 'Map link'
+          -
+            handle: social_links
+            field:
+              type: replicator
+              display: 'Social links'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: social_title
+                          field:
+                            type: text
+                            display: 'Social Title'
+                        -
+                          handle: social_icon
+                          field:
+                            type: icon
+                            display: 'Social icon'
+                        -
+                          handle: social_link
+                          field:
+                            type: link
+                            display: 'Social link'
+          -
+            handle: options
+            field:
+              type: replicator
+              display: Options
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: option_title
+                          field:
+                            type: text
+                            display: 'Option title'
+                        -
+                          handle: inner_options
+                          field:
+                            type: replicator
+                            display: 'Inner options'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: inner_option_title
+                                        field:
+                                          type: text
+                                          display: 'Inner option title'
+                                      -
+                                        handle: inner_option_link
+                                        field:
+                                          type: link
+                                          display: 'Inner option link'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              from: footer_title
