@@ -1,5 +1,4 @@
-order: 1
-title: Header
+title: Reviews
 tabs:
   main:
     display: Main
@@ -14,10 +13,10 @@ tabs:
               validate:
                 - required
           -
-            handle: navbar_item
+            handle: review
             field:
               type: replicator
-              display: 'Navbar item'
+              display: Review
               sets:
                 new_set_group:
                   display: 'New Set Group'
@@ -26,21 +25,15 @@ tabs:
                       display: 'New Set'
                       fields:
                         -
-                          handle: item_name
+                          handle: client_name
                           field:
                             type: text
-                            display: 'Item name'
+                            display: 'Client name'
                         -
-                          handle: item_link
+                          handle: client_review
                           field:
-                            type: link
-                            display: 'Item link'
-          -
-            handle: logo
-            field:
-              container: assets
-              type: assets
-              display: Logo
+                            type: textarea
+                            display: 'Client review'
   sidebar:
     display: Sidebar
     sections:
@@ -52,4 +45,3 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-              from: slug

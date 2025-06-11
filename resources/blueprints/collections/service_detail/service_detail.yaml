@@ -1,4 +1,4 @@
-title: 'Image Components'
+title: 'Service detail'
 tabs:
   main:
     display: Main
@@ -13,17 +13,32 @@ tabs:
               validate:
                 - required
           -
-            handle: imaged_component_description
+            handle: content
             field:
-              remove_empty_nodes: false
-              type: bard
-              display: 'Imaged component description'
+              type: markdown
+              display: Content
+              localizable: true
           -
-            handle: imaged_component_image
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: image
             field:
               container: assets
               type: assets
-              display: 'Imaged component image'
+              display: image
+          -
+            handle: button_text
+            field:
+              type: text
+              display: 'Button text'
+          -
+            handle: link
+            field:
+              type: link
+              display: Link
   sidebar:
     display: Sidebar
     sections:

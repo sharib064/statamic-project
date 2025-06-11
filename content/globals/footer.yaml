@@ -1,0 +1,43 @@
+title: Footer
+data:
+  title: Footer
+  footer_logo:
+    - stc-logo.png
+  address:
+    -
+      id: mbrsst9f
+      address_title: 'Main office'
+      address: xyz
+      type: new_set
+      enabled: true
+  social_links:
+    -
+      id: mbrsszaa
+      social_title: Facebook
+      social_icon:
+        - stc-logo.png
+      type: new_set
+      enabled: true
+  options:
+    -
+      id: mbrst7f6
+      option_title: FAQs
+      inner_option:
+        -
+          id: mbrstcjf
+          inner_option_title: xyz
+          type: new_set
+          enabled: true
+      type: new_set
+      enabled: true
+    -
+      id: mbrstl1m
+      option_title: 'Quick links'
+      inner_option:
+        -
+          id: mbrstqqq
+          inner_option_title: Home
+          type: new_set
+          enabled: true
+      type: new_set
+      enabled: true

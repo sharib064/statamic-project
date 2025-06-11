@@ -1,0 +1,31 @@
+title: Header
+data:
+  title: Header
+  navbar_item:
+    -
+      id: mbrsuiii
+      item_name: Home
+      type: new_set
+      enabled: true
+    -
+      id: mbrsul57
+      item_name: 'About us'
+      type: new_set
+      enabled: true
+    -
+      id: mbrsuqmq
+      item_name: Policy
+      type: new_set
+      enabled: true
+    -
+      id: mbrsuwvu
+      item_name: Careers
+      type: new_set
+      enabled: true
+    -
+      id: mbrsv1yy
+      item_name: Servies
+      type: new_set
+      enabled: true
+  logo:
+    - stc-logo.png

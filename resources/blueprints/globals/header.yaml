@@ -1,5 +1,3 @@
-order: 1
-title: Header
 tabs:
   main:
     display: Main
@@ -10,9 +8,7 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
-              validate:
-                - required
+              display: Title
           -
             handle: navbar_item
             field:
@@ -29,27 +25,15 @@ tabs:
                           handle: item_name
                           field:
                             type: text
-                            display: 'Item name'
+                            display: 'item name'
                         -
                           handle: item_link
                           field:
                             type: link
-                            display: 'Item link'
+                            display: 'item link'
           -
             handle: logo
             field:
               container: assets
               type: assets
               display: Logo
-  sidebar:
-    display: Sidebar
-    sections:
-      -
-        fields:
-          -
-            handle: slug
-            field:
-              type: slug
-              localizable: true
-              validate: 'max:200'
-              from: slug

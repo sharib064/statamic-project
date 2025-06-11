@@ -1,4 +1,4 @@
-title: 'Image Components'
+title: 'Banner Component'
 tabs:
   main:
     display: Main
@@ -13,17 +13,18 @@ tabs:
               validate:
                 - required
           -
-            handle: imaged_component_description
-            field:
-              remove_empty_nodes: false
-              type: bard
-              display: 'Imaged component description'
-          -
-            handle: imaged_component_image
+            handle: banner_image
             field:
               container: assets
               type: assets
-              display: 'Imaged component image'
+              display: 'Banner Image'
+              validate:
+                - required
+          -
+            handle: banner_heading
+            field:
+              type: text
+              display: 'Banner heading'
   sidebar:
     display: Sidebar
     sections:

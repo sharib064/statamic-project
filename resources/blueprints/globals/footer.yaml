@@ -1,5 +1,3 @@
-order: 2
-title: Footer
 tabs:
   main:
     display: Main
@@ -10,16 +8,7 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
-              validate:
-                - required
-          -
-            handle: footer_title
-            field:
-              type: text
-              validate:
-                - required
-              display: 'Footer title'
+              display: Title
           -
             handle: footer_logo
             field:
@@ -27,10 +16,10 @@ tabs:
               type: assets
               display: 'Footer logo'
           -
-            handle: addresses
+            handle: address
             field:
               type: replicator
-              display: Addresses
+              display: Address
               sets:
                 new_set_group:
                   display: 'New Set Group'
@@ -69,11 +58,12 @@ tabs:
                           handle: social_title
                           field:
                             type: text
-                            display: 'Social Title'
+                            display: 'Social title'
                         -
                           handle: social_icon
                           field:
-                            type: icon
+                            container: assets
+                            type: assets
                             display: 'Social icon'
                         -
                           handle: social_link
@@ -98,10 +88,10 @@ tabs:
                             type: text
                             display: 'Option title'
                         -
-                          handle: inner_options
+                          handle: inner_option
                           field:
                             type: replicator
-                            display: 'Inner options'
+                            display: 'Inner option'
                             sets:
                               new_set_group:
                                 display: 'New Set Group'
@@ -119,14 +109,3 @@ tabs:
                                         field:
                                           type: link
                                           display: 'Inner option link'
-  sidebar:
-    display: Sidebar
-    sections:
-      -
-        fields:
-          -
-            handle: slug
-            field:
-              type: slug
-              localizable: true
-              validate: 'max:200'

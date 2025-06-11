@@ -1,4 +1,4 @@
-title: 'Image Components'
+title: 'Image Listing'
 tabs:
   main:
     display: Main
@@ -13,17 +13,27 @@ tabs:
               validate:
                 - required
           -
-            handle: imaged_component_description
+            handle: listing_description
             field:
-              remove_empty_nodes: false
-              type: bard
-              display: 'Imaged component description'
+              type: textarea
+              display: 'Listing Description'
           -
-            handle: imaged_component_image
+            handle: listing_image
             field:
+              max_files: 1
               container: assets
               type: assets
-              display: 'Imaged component image'
+              display: 'Listing image'
+          -
+            handle: button_text
+            field:
+              type: text
+              display: 'Button text'
+          -
+            handle: button_link
+            field:
+              type: link
+              display: 'Button link'
   sidebar:
     display: Sidebar
     sections:

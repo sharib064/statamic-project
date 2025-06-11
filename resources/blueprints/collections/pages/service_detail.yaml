@@ -1,10 +1,9 @@
-title: 'Standard Page'
+title: 'Service detail'
 tabs:
   main:
     display: Main
     sections:
       -
-        display: Header
         fields:
           -
             handle: title
@@ -13,37 +12,29 @@ tabs:
               required: true
               validate:
                 - required
+      -
+        display: Header
+        fields:
           -
             handle: header
             field:
+              max_items: 1
+              mode: select
               collections:
                 - global_components
               type: entries
               display: Header
-              max_items: 1
-              create: false
-              mode: select
       -
         display: Banner
         fields:
           -
-            handle: components
+            handle: detail_banner
             field:
-              collections:
-                - components
-              type: entries
-              display: Banner
               max_items: 1
-      -
-        display: Components
-        fields:
-          -
-            handle: component
-            field:
               collections:
                 - components
               type: entries
-              display: Component
+              display: 'Detail banner'
       -
         display: Footer
         fields:
@@ -52,7 +43,6 @@ tabs:
             field:
               max_items: 1
               mode: select
-              create: false
               collections:
                 - global_components
               type: entries
@@ -74,7 +64,6 @@ tabs:
               type: entries
               collections:
                 - pages
-                - global_components
               max_items: 1
               listable: false
               localizable: true

@@ -1,0 +1,15 @@
+title: 'Service detail'
+template: default
+layout: layout
+mount: 5c7a3cc7-37b9-419b-89c9-1213857497ed
+revisions: false
+route: '/{mount}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

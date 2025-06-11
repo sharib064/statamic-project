@@ -1,5 +1,4 @@
-order: 1
-title: Header
+title: Listing
 tabs:
   main:
     display: Main
@@ -11,13 +10,11 @@ tabs:
             field:
               type: text
               required: true
-              validate:
-                - required
           -
-            handle: navbar_item
+            handle: listing
             field:
               type: replicator
-              display: 'Navbar item'
+              display: Listing
               sets:
                 new_set_group:
                   display: 'New Set Group'
@@ -26,21 +23,25 @@ tabs:
                       display: 'New Set'
                       fields:
                         -
-                          handle: item_name
+                          handle: listing_title
                           field:
                             type: text
-                            display: 'Item name'
+                            display: 'listing title'
                         -
-                          handle: item_link
+                          handle: listing_description
+                          field:
+                            type: textarea
+                            display: 'listing description'
+                        -
+                          handle: listing_button_text
+                          field:
+                            type: text
+                            display: 'listing button text'
+                        -
+                          handle: listing_button_link
                           field:
                             type: link
-                            display: 'Item link'
-          -
-            handle: logo
-            field:
-              container: assets
-              type: assets
-              display: Logo
+                            display: 'listing button link'
   sidebar:
     display: Sidebar
     sections:
@@ -52,4 +53,3 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-              from: slug

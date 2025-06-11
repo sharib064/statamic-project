@@ -36,5 +36,5 @@ navbar_item:
 logo:
   - stc-logo.png
 updated_by: b3d2eb5e-7cfc-4118-8197-cc2aca8fb55f
-updated_at: 1749558660
+updated_at: 1749619408
 ---
