@@ -1,15 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ site:short_locale }}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{{ title ?? site:name }}</title>
+
+        <!-- Make sure Tailwind CSS is properly included -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- If using Vite -->
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="bg-slate-100 dark:bg-gray-800 font-sans leading-normal text-slate-800 dark:text-gray-400">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
+
+    <body
+        class="bg-slate-100 dark:bg-gray-800 font-sans leading-normal text-slate-800 dark:text-gray-400"
+    >
+        <!-- Header with forced light colors -->
+        <header class="w-full bg-gray-900 text-white !important">
+            <nav
+                class="container mx-auto flex justify-between items-center py-5 px-4"
+            >
+                <!-- Site title/logo -->
+                <div class="text-xl font-bold">
+                    {{ if header }}
+                    <a href="/" class="text-white hover:text-gray-300"
+                        >{{ title }}</a
+                    >
+                    {{ /if }}
+                </div>
+
+                <!-- Navigation items -->
+                <div class="flex space-x-8">
+                    {{ header:navbar_item }}
+                    <a
+                        href="{{ item_link }}"
+                        class="text-white hover:text-gray-300 transition-colors"
+                    >
+                        {{ item_name }}
+                    </a>
+                    {{ /header:navbar_item }}
+                </div>
+            </nav>
+        </header>
+
+        <main
+            class="mx-auto lg:min-h-screen"
+        >
             {{ template_content }}
-        </div>
+        </main>
+
+        <footer class="bg-gray-900 text-white py-8">
+            <div class="mx-auto px-4 flex justify-between">
+                <div>
+                    {{ if footer }}
+                    <h2 class="text-2xl font-bold mb-4">{{ footer_title }}</h2>
+                    {{ /if }}
+                </div>
+                <div>
+                    {{ footer:addresses }}
+                    <h3 class="text-xl font-semibold mt-6">
+                        {{ address_title }}
+                    </h3>
+                    <p class="text-gray-300">{{ address }}</p>
+                    {{ /footer:addresses }}
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mt-6">Social links</h3>
+                    {{ footer:social_links }}
+                    <h3 class="text-xl mt-6">{{ social_title }}</h3>
+                    <div class="flex space-x-4 mt-2"></div>
+                    {{ /footer:social_links }}
+                </div>
+
+                {{ footer:options }}
+                <div>
+                    <h3 class="text-xl font-semibold mt-6">
+                        {{ option_title }}
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+                        {{ inner_options }}
+                        <a href="#" class="text-gray-300 hover:text-white"
+                            >{{ inner_option_title }}</a
+                        >
+                        {{ /inner_options }}
+                    </div>
+                </div>
+                {{ /footer:options }}
+            </div>
+        </footer>
     </body>
 </html>

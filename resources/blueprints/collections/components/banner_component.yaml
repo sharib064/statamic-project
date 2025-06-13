@@ -25,6 +25,11 @@ tabs:
             field:
               type: text
               display: 'Banner heading'
+          -
+            handle: image_link
+            field:
+              type: link
+              display: 'Image Link'
   sidebar:
     display: Sidebar
     sections:

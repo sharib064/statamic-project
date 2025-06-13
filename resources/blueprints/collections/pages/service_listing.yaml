@@ -12,6 +12,12 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: template
+            field:
+              blueprint: true
+              type: template
+              display: Template
       -
         display: Header
         fields:
@@ -40,7 +46,7 @@ tabs:
         display: 'Service listing'
         fields:
           -
-            handle: services
+            handle: services_option
             field:
               type: replicator
               display: Services
@@ -48,16 +54,16 @@ tabs:
                 new_set_group:
                   display: 'New Set Group'
                   sets:
-                    new_set:
-                      display: 'New Set'
+                    services_option:
+                      display: services
                       fields:
                         -
-                          handle: entries_field
+                          handle: service
                           field:
                             collections:
                               - service_detail
                             type: entries
-                            display: 'Entries Field'
+                            display: service
       -
         display: Footer
         fields:

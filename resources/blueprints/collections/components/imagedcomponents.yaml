@@ -24,6 +24,11 @@ tabs:
               container: assets
               type: assets
               display: 'Imaged component image'
+          -
+            handle: image_link
+            field:
+              type: link
+              display: 'Image link'
   sidebar:
     display: Sidebar
     sections:

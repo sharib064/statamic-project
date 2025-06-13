@@ -14,5 +14,6 @@ services:
     enabled: true
 footer: 25b674d3-32ae-406f-86b4-6a2cdfc1093f
 updated_by: b3d2eb5e-7cfc-4118-8197-cc2aca8fb55f
-updated_at: 1749627139
+updated_at: 1749794716
+template: layout
 ---

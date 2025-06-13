@@ -27,5 +27,10 @@ data:
       item_name: Servies
       type: new_set
       enabled: true
+    -
+      id: mbuftrf0
+      item_name: Sharib
+      type: new_set
+      enabled: true
   logo:
     - stc-logo.png

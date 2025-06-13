@@ -27,7 +27,7 @@ tabs:
         display: Banner
         fields:
           -
-            handle: components
+            handle: banner_component
             field:
               collections:
                 - components
@@ -74,7 +74,11 @@ tabs:
               type: entries
               collections:
                 - pages
-                - global_components
               max_items: 1
               listable: false
               localizable: true
+          -
+            handle: template
+            field:
+              type: template
+              display: Template

@@ -1,1 +1,43 @@
+<div>
+    <section class="relative">
+        {{ if banner_component:banner_image }}
+        <div class="absolute inset-0 z-0">
+            {{ glide:banner_component:banner_image width="1920" height="1080"
+            fit="crop_focal" }}
+            <img
+                src="{{ banner_component:image_link }}"
+                alt="{{ alt }}"
+                class="w-full h-full object-cover"
+            />
+            {{ /glide:banner_component:banner_image }}
+        </div>
+        {{ /if }}
+        <div
+            class="relative z-10 container mx-auto px-4 py-24 md:py-32 text-center"
+        >
+            {{ banner_component }}
+            <h1
+                class="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg"
+            >
+                {{ banner_heading ?? "HOME" }}
+            </h1>
+
+            {{ /banner_component }}
+        </div>
+    </section>
+</div>
+
+<div class="text-center">
+    {{component}}
+        <h1 class="text-5xl text-white font-bold">{{title}}</h1>
+        {{if listing}}
+            {{listing}}
+                <h1 class="text-2xl text-white font-semibold">{{listing_title}}</h1>
+                <h1 class="text-xl text-white ">{{listing_description}}</h1>
+            {{ /listing}}
+
+        {{/if}}
+     {{/component}}
+</div>
+
 {{ content }}

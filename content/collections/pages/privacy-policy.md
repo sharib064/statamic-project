@@ -8,5 +8,7 @@ component:
   - 895e7c36-b6ab-43e8-bf38-f3fbd2f3ac26
 footer: 25b674d3-32ae-406f-86b4-6a2cdfc1093f
 updated_by: b3d2eb5e-7cfc-4118-8197-cc2aca8fb55f
-updated_at: 1749618710
+updated_at: 1749813225
+template: default
+banner_component: 0995e5db-89fb-4f1c-b678-25548347021e
 ---
